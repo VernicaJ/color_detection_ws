@@ -37,7 +37,7 @@ def generate_launch_description():
                 'image_pub_topic': '/webcam/image_filtered',
                 'lower_h': 100,
                 'lower_s': 50,
-                'lower_v': 50,
+                'lower_v': 20,
                 'upper_h': 130,
                 'upper_s': 255,
                 'upper_v': 255,
