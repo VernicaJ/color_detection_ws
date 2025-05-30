@@ -12,25 +12,25 @@ ROS 2 C++ node that subscribes to webcam image, replaces a sepecified color and 
 
 ### `color_detection`
 
-ROS2 bring-up package launch both webcam driver and color filter packages.
+ROS2 bring-up package to launch both webcam driver and color filter packages.
 
 ## Usage
 
 1. **Build the workspace**
 
-'''
+```bash
 cd color_detection_ws
 colcon build --symlink-install
 source install/setup.bash
 
-'''
+```
 
 2. **Launch both nodes**
 
-'''
+```bash
 ros2 launch color_detection color_detection.launch.py
 
-'''
+```
 
 ## Result
 
