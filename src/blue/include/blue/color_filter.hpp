@@ -22,4 +22,9 @@ private:
 
   // Subscriber callback
   void image_callback(const sensor_msgs::msg::Image::SharedPtr msg);
+  void show_resized(
+    const std::string & window_name,
+    const cv::Mat & image,
+    int width = 420,
+    int height = 310);
 };

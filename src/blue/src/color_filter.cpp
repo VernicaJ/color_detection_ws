@@ -46,6 +46,16 @@ ColorFilter::ColorFilter()
 
 }
 
+// Resize GUI
+void ColorFilter::show_resized(
+  const std::string & window_name, const cv::Mat & image, int width,
+  int height)
+{
+  cv::namedWindow(window_name, cv::WINDOW_NORMAL);
+  cv::resizeWindow(window_name, width, height);
+  cv::imshow(window_name, image);
+}
+
 // Subscriber callback
 void ColorFilter::image_callback(const sensor_msgs::msg::Image::SharedPtr msg)
 {
@@ -85,11 +95,11 @@ void ColorFilter::image_callback(const sensor_msgs::msg::Image::SharedPtr msg)
     }
   }
   // Show images
-  if (show_images_){
-  cv::imshow("Original image", image);
-  cv::imshow("Detected mask", masked_image);
-  cv::imshow("Output: Changed mask color", output_image);
-  cv::waitKey(1);
+  if (show_images_) {
+    show_resized("Original image", image);
+    show_resized("Detected mask", masked_image);
+    show_resized("Output: Changed mask color", output_image);
+    cv::waitKey(1);
   }
   // Convert output image to ROS2 msg
   auto output_msg = cv_bridge::CvImage(
