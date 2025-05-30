@@ -34,3 +34,4 @@ ros2 launch color_detection color_detection.launch.py
 
 ## Result
 
+![Filtered Image Output](color_detection_result.png)
