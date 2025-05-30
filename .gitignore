@@ -1,0 +1,20 @@
+cat <<EOF > .gitignore
+build/
+install/
+log/
+*.pyc
+__pycache__/
+.colcon/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# VSCode or JetBrains IDE
+.vscode/
+.idea/
+
+# Misc
+.DS_Store
+
+EOF
