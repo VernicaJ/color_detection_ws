@@ -2,8 +2,6 @@ cat <<EOF > .gitignore
 build/
 install/
 log/
-*.pyc
-__pycache__/
 .colcon/
 
 # Python cache
