@@ -6,9 +6,9 @@ The project captures live webcam images,  identifies the color - Blue, and chang
 
 The pipeline consists of two main nodes:
 
-Webcam Driver (Python): Captures images from a webcam using OpenCV and publishes them as ROS 2 image messages.
+- Webcam Driver (Python): Captures images from a webcam using OpenCV and publishes them as ROS 2 image messages.
 
-Color Filter (C++): Subscribes to the webcam image stream, identifies colour and replaces it before publishing the processed image.
+- Color Filter (C++): Subscribes to the webcam image stream, identifies colour and replaces it before publishing the processed image.
 
 The nodes communicate through ROS 2 publisher-subscriber interfaces. A launch file starts both nodes and allows selected parameters to be configured.
 
